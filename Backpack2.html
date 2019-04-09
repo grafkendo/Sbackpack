@@ -1,0 +1,434 @@
+﻿
+
+ <!DOCTYPE html>
+<html>
+<head>
+<!-- <script   src="mod.js">  </script> -->
+ 
+<script src="marketfinder.js"> </script>
+<script >
+	function  showMarket(str)	{ 
+          let Market = getMarket(str);
+          document.getElementById("market").value = Market;
+					alert(Market);
+				}
+</script>
+<script>
+// todo:  set up counter resetbutton 10 seconds milestones
+// todo: arm script slidercreate arm object to hold array of text   ,  update node with id "armtext"  at 3 second interval
+// todo: add international rates  https://www.spectrum.com/home-phone.html   www.spectrum.net/rates 
+
+
+
+
+
+</script>
+
+<!-- find divison module -->
+
+<!-- bold first letter of alpha codes! does not work :( -->
+<script>
+
+window.onload = function(){
+  var elements = document.getElementById("alfacodes")
+  for (var i=0; i<elements.length; i++){
+    elements[i].innerHTML = elements[i].innerHTML.replace(/\\b([a-z])([a-z]+)?\\b/gim, "<div id='alfacodes'>$1</div>$2")
+  }
+}
+</script>
+<!-- counter script adapted from w3school demo counter >> https://www.w3schools.com/howto/howto_js_countdown.asp   -->
+
+<script>
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+// Get todays date and time
+var now = new Date().getTime();
+
+// Find the distance between now and the count down date
+var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+// Display the result in the element with id="demo"
+  //document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+ // + minutes + "m " + seconds + "s ";
+
+document.getElementById("demo").innerHTML = ` :${minutes}:${seconds}`
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<script>
+// for bootstrap buttons not used
+function relocate_gateway()
+{
+     location.href="https://chtrgwy.corp.chartercom.com/static/gateway/current/#/dashboard" ;
+} 
+function relocate_agentassist()
+{
+     location.href="http://coin/sites/AAT/HSDCAOntario/default.aspx" ;
+} 
+
+// copy text func takes string text to be copied // add acceptable speeds to buttons.
+
+function copy_inner_text(str)
+
+{
+ 	//write str to clipboard same window workss acrsoss tabs
+  	navigator.clipboard.writeText(str);
+ 	//alert(str);
+	str="";// reset to empty string
+}
+
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+.infobox{background-color:black; color:#00ced1; width:25%;  height:300px; padding:10px; float:left; }
+
+.codebox{background-color:black; color:grey; width:25%;  height:200px; padding:10px; float:left;}
+
+#agentinfo{background-color:#C0C0C0; width:100%; color:black;   margin:5px; padding:10px; float:left;}
+#mainview{ background-color:#ADD8E6; width:100%;  float:left; }
+.viewframe{width:80%; margin: auto;}
+#wraper{margin:auto; padding:10px;}
+#salesid{background-color:#C0C0C0;}
+
+#counter{ font-weight:700; font-size:3em;  width:25%; color:white;  margin:5px; padding:10px;float:left;}
+#buttons{ margin:10px; width:100%;float:left; }
+
+#phone_buttons{background-color:#C0C0C0; margin:5px; height:150px; width:45%;padding:5px; float:left; }
+#marketfinder{background-color:orange; margin:5px; height:150px; width:45%; padding:5px; float:left;}
+
+
+#alfacodes{ text-align: center; text-transform:uppercase; color:white; background-color:#003366; margin:5px; padding:5px;}
+#links{width:100%;  font-weight:700; color:blue; float:left}
+#links a{  text-decoration:none; background-color:grey; color:white; margin:5px; padding:5px;}
+
+
+</style>
+</head>
+<body>
+
+<div id="wraper">
+<!-- <div id="aat-wraper">
+<iframe src="http://coin/sites/AAT/HSDCAOntario/Lists/Pending%20Requests/NewForm.aspx" style="height: 300px; width:100%; margin:5px; border:none;"></iframe>
+</div><!-- end aat-->
+<div id="armslider">
+
+
+
+
+
+
+
+
+<div id="agentinfo">
+<div id="counter" >
+
+	<p id="demo"></p>
+
+</div> <!-- end counter -->
+
+<div>
+
+<ul> 
+	<li id="salesid" onclick="copy_inner_text('49823')">Sales id 49823  </li>
+	<li id="p ID" onclick="copy_inner_text('P2856298')"> Pid: P2856298 </li>
+	<li id="salesid" onclick="copy_inner_text('E856298')">E ID: E856298 </li>
+</ul>
+</div>
+
+<div>We assist accounts beginning with 8448, 8260, 8150, and I believe 8347.  </div>
+
+<div> newstar link  https://ivrgui.neustar.biz/anivr/Login.do
+ 
+Domain:	TWC_PROD	   
+Username:	TIER 3 COS_PORT	   
+Password:	reset1	 
+</div>
+</div><!-- end agent info -->
+
+
+
+<div id="alfacodes" > 
+Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf,
+ Hotel, India, Juliett, Kilo, Lima, Mike, November,
+ Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform,
+ Victor, Whiskey, X-ray, Yankee, Zulu
+</div>
+
+
+
+
+
+ 
+<div id="buttons">
+<button>
+
+<a href="http://coin/sites/AAT/HSDCAOntario/default.aspx" target=�_blank� >AAT</a>
+</button>
+
+<button>
+<a href="https://chtrgwy.corp.chartercom.com/static/gateway/current/#/dashboard" target=�_blank� >Gateway</a>
+</button>
+
+<button>
+<a href="https://charter.hosted.aspect-cloud.net/WFO/CHARTER/home/dashboard" target=�_blank� >aspect</a>
+</button>
+<button>
+<a href="https://charterukm.custhelp.com/app/answers/answer_view/a_id/1008623" target=�_blank� >Router login info</a>
+</button>
+<button>
+<a href="http://share.twcable.com/sites/ECCTools/TWCEquipmentLibrary/SitePages/Phone.aspx" target=�_blank� >equipment library</a>
+</button>
+<button>
+<a href="https://scope.charter.com/" target=�_blank� >scope</a>
+</button>
+
+<button>
+<a href="https://etsl1.twcable.com/whiteboard" target=�_blank� >Witebaord</a>
+</button>
+
+
+<button>
+<a href="https://charterukm.custhelp.com/app/home" target=�_blank� >copilot</a>
+</button>
+
+<button>
+<a href="https://www.spectrum.com/stores.html" target=�_blank� >StoreLocator</a>
+</button>
+
+
+<button>
+<a href="https://outlook.charter.com/" target=�_blank� >Out look</a>
+</button>
+
+<button>
+<a href="http://coin/sites/STLMetroKMA/STLMETROCC/STLBridgetonTR/StA" target=�_blank� >STA!</a>
+</button>
+
+<button>
+<a href="https://charterukm.custhelp.com/app/answers/answer_view/a_id/1011677" target=�_blank� >BIN!</a>
+</button>
+
+ <button>
+<a href="https://cyclops-returns.timewarnercable.com/#/login" target=_blank >cyclops</a>
+</button>
+
+</div><!--  end buttons -->
+ 
+
+<div id="phone_buttons">
+
+<button>
+<a href="https://charterukm.custhelp.com/app/answers/answer_view/a_id/1012549/loc/en_US#__highlight" target=�_blank� >star codes GEN6921</a>
+</button>
+
+<button>
+<a href="https://omsev2.twcable.com/cwf" target=�_blank� >OMSE</a>
+</button>
+
+<button>
+<a href="http://csr.twcable.com/" target=�_blank� >oBo</a>
+</button>
+
+
+<button>
+<a href="https://devicemgmt.rr.com/" target=�_blank� >device mgmt portal</a>
+</button>
+
+<button>
+<a href="https://portps-legacy.neustar.biz/portps/SubmitLogon.do?u=TWC_PROD%40neustar.biz&p=QRwGFkiVp592i5ULTHJkzsnUn4k%3D" target=�_blank� >port PS</a>
+</button>
+
+
+<button>
+<a href="https://charter.csr.info/#/login" target=�_blank� >TRAM TOOL</a>
+</button>
+
+<button>
+<a href="https://ivrgui.neustar.biz/anivr/TNActivation.do " target=�_blank� >newstar</a>
+</button>
+
+<button>
+<a href="https://issuetrak.twcable.com/SPA/#/issue/customer/find" target=�_blank� >-UCM-</a>
+</button>
+
+<!-- *************   TEST ******************** -->
+<button onclick="aller_text( )">
+ Mod test
+</button>
+
+<!-- *************   TEST ******************** -->
+ 
+
+<div id=phone_info>
+  <p>device mgmt credss Username: <span onclick="copy_inner_text('California_IMS')">California_IMS</span> Password: <span onclick="copy_iner_text('Fv6DZvUnpD')"> Fv6DZvUnpD </span></br></p>
+
+
+ <p> realtime csr (tram)  Pid Password: <span onclick="copy_inner_text('Password@123')"> Password@123 </span>  </br></p>
+
+</div>
+
+
+</div><!-- end phone buttons-->
+
+
+<div id="marketfinder">
+
+ <input id="acct" type="text"></input>
+<button onclick="showMarket(document.getElementById('acct').value)">- Find -</button>
+<p><h1 id="market" >Market</h1></span></p>
+
+
+
+
+</div>
+
+
+ </div>
+
+<div>
+
+<div class="infobox">
+<h2>router access</h2>
+<ul>
+<li onclick="copy_inner_text('T!m3W4rn3rC4bl3')">Arris- technician/ T!m3W4rn3rC4bl3</Li>
+<li onclick="copy_inner_text('T1meWarner!23')">TC- technician/ T1meWarner!23</li>
+<li onclick="copy_inner_text('C0nf1gur3Ubee#')">Ubee- technician/ C0nf1gur3Ubee#</li>
+<li onclick="copy_inner_text('admin')">Sagemcom- admin/ admin</li>
+<li onclick="copy_inner_text('r3m0t3ACwav32')"> askey- technician/ r3m0t3ACwav32</li>
+<li onclick="copy_inner_text('r3m0t3ACwav32')"> netgear- MSO/changeme or admin/password</li>
+</ul>
+</div>
+
+<div class="infobox">
+<h2>bin speeds</h2>
+<ul>
+<li>BW143- 30x5 base</li>
+<li>BW141- 60x5 base</li>
+<li>BW145- 100x10 base</li>
+<li>BW153- 50x5 base</li>
+<li>BW157- 200x10 base</li>
+<li>BW158- 400x20 ultra</li>
+</ul>
+</div>
+
+<div class="infobox">
+<h2>customer modem</h2>
+<ul>
+<li>Customer Owned MDM:</li>
+<li>NY: In the installation box select No</li>
+<li>TX:  XT (no truck), MY, CUSTMOD</li>
+<li>Truck roll, 2, AHMOTO</li>
+<li>West: *awg Optout, My, comodd3</li>
+ 
+</ul>
+</div>
+
+<div class="infobox">
+<h2>tc codes:</h2>
+<ul>
+<li>RZ - all service out</li>
+<li>ZE - single play rescue</li>
+<li>DI - double play rescue</li>
+<li>ZF - triple play rescue</li>
+<li>ZB - hsd slow/perf</li>
+<li> WD- wifi down</li>
+<li> ZC - wifi perf problem</li>
+<li> SB - intermittent</li>
+ 
+</ul>
+</div>
+
+</div>
+
+<div>
+
+<div class="codebox">
+<h1>ship modem </h1>
+
+S Ec Xst Sh
+S Shpd3wdmta
+S Ship Rtr
+Exist/No Vid
+Eck Tracking
+hsd UPgrade
+
+ </div>
+
+<div class="codebox">
+<h1> add wifi upgrade </h1>
+
+-S Wifioptout,(remove)
++S Wifiopt-In,
++S Wifi Serv
++S Wifi Rtr,
++S Wifiactvtn
++S Chngsvntrk
+
+ </div>
+
+<div class="codebox">
+<h1> add wifi codes2 </h1>
+
+-Scustmodm
+*D3-Nohsd, 
+Sawg/Rtr AO,
+S wifiopt-In,
+S wifi Serv,
+Swifi Rtr, 
+S wifiactvtn, 
+S his Modem
+
+
+ </div>
+
+<div class="codebox">
+<h1> move outlet </h1>
+
+ +S Relo Outlt
++Sinstconnet
+
+ </div>
+
+<div class="codebox">
+<h1> move outlet </h1>
+
+ +S Relo Outlt
++Sinstconnet
+
+ </div>
+
+
+ 
+
+ <div id="links" >
+<h2> agent links</h2>
+
+ <a href="passwordhelp.charter.com">passwordhelp.charter.com </a>
+<a href="https://coin.chartercom.com/sites/CustomerOps/VRDT/Lists/Other%20LTWC%20Tools/AllItems.aspx?RootFolder=/sites/CustomerOps/VRDT/Lists/Other%20LTWC%20Tools/Desktop%20AHT%20Tracker&FolderCTID=0x012000C3A6734115A74F4DB5CBE5F87EE7F879&View=%7bAA5DFDFC-143E-4B53-9284-E79DE106301F%7d"> AHT tool <a/>
+<a href=" http://subscribermgmt.rr.com/ReasonInfo.aspx?code=scopeCodeHere"> registration info link get reason code frome scope </a> 
+
+ </div>
+  
+</div>
+ 
+
+</body>
+</html>
